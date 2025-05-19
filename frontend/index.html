@@ -27,7 +27,159 @@
   </head>
 
   <body>
-    <!-- Start Testimonial Slider -->
+    <button onclick="topFunction()" id="scrollTop" title="Go to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+    <!-- Start Header/Navigation -->
+    <nav
+      class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark"
+      arial-label="Furni navigation bar"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="index.html"
+          >Belleza Extrema<span>.</span></a
+        >
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarsFurni"
+          aria-controls="navbarsFurni"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsFurni">
+          <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Inicio</a>
+            </li>
+            <li><a class="nav-link" href="#productos">Productos</a></li>
+            <li><a class="nav-link" href="#testimonios">Testimonios</a></li>
+            <li><a class="nav-link" href="#footer">Contacto</a></li>
+          </ul>
+
+          <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+            <li>
+              <a class="nav-link" onclick="userAlert()"><img src="images/user.svg" /></a>
+            </li>
+            <li>
+              <a class="nav-link" onclick="shopAlert2()"
+                ><img src="images/cart.svg"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End Header/Navigation -->
+
+    <!-- Start Hero Section -->
+    <div class="hero">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-lg-7">
+            <div class="hero-img-wrap">
+              <img
+                src="https://content.app-sources.com/s/53118190821339987/uploads/Wellness/wellness-1675474.png?format=webp"
+                class="img-fluid"
+                style="height: 450px !important;"
+              />
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="intro-excerpt">
+              <h1>Bienvenidos</h1>
+              <p class="mb-4">
+                Tu tienda de productos de belleza de alta calidad.
+              </p>
+              <p>
+                <a onclick="shopAlert2()" class="btn btn-secondary me-2">Comprar ahora</a
+                ><a href="#productos" class="btn btn-white-outline">Explorar</a>
+              </p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <!-- End Hero Section -->
+
+    
+
+    <!-- Start Product Section -->
+    <div id="productos" class="product-section">
+      <div class="container">
+        <div class="row">
+          <!-- Start Column 1 -->
+          <div class="col-md-12 col-12 mb-5 mb-lg-0">
+            <h2 class="mb-4 section-title">Belleza al alcance de tus manos</h2>
+            <p class="mb-4">
+              Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet
+              velit. Aliquam vulputate velit imperdiet dolor tempor tristique.
+            </p>
+          </div>
+          <!-- End Column 1 -->
+
+          <!-- Start Column 2 -->
+          <div class="col-12 col-md-4 col-lg-4 mb-5 mb-md-0">
+            <a class="product-item" onclick="shopAlert()">
+              <img
+                src="https://sdcdn.io/mac/mx/mac_sku_MCMX40_1x1_0.png?width=1080&height=1080"
+                class="img-fluid product-thumbnail"
+              />
+              <h3 class="product-title">Set de Maquillaje MAC</h3>
+              <strong class="product-price">$50.00</strong>
+
+              <span class="icon-cross">
+                <img src="images/cross.svg" class="img-fluid" />
+              </span>
+            </a>
+          </div>
+          <!-- End Column 2 -->
+
+          <!-- Start Column 3 -->
+          <div class="col-12 col-md-4 col-lg-4 mb-5 mb-md-0">
+            <a class="product-item" onclick="shopAlert()">
+              <img
+                src="https://sdcdn.io/mac/mx/mac_sku_S23S01_1x1_0.png?width=1080&height=1080"
+                class="img-fluid product-thumbnail"
+              />
+              <h3 class="product-title">Set de Maquillaje MAC</h3>
+              <strong class="product-price">$78.00</strong>
+
+              <span class="icon-cross">
+                <img src="images/cross.svg" class="img-fluid" />
+              </span>
+            </a>
+          </div>
+          <!-- End Column 3 -->
+
+          <!-- Start Column 4 -->
+          <div class="col-12 col-md-4 col-lg-4 mb-5 mb-md-0">
+            <a class="product-item" onclick="shopAlert()">
+              <img
+                src="https://sdcdn.io/mac/mx/mac_sku_MCMX39_1x1_0.png?width=1080&height=1080"
+                class="img-fluid product-thumbnail"
+              />
+              <h3 class="product-title">Set de Maquillaje MAC</h3>
+              <strong class="product-price">$43.00</strong>
+
+              <span class="icon-cross">
+                <img src="images/cross.svg" class="img-fluid" />
+              </span>
+            </a>
+          </div>
+          <!-- End Column 4 -->
+        </div>
+      </div>
+    </div>
+    <!-- End Product Section -->
+
+     <!-- Start Testimonial Slider -->
     <div id="testimonios" class="testimonial-section">
       <div class="container">
         <div class="row">
@@ -145,6 +297,12 @@
       </div>
     </div>
     <!-- End Testimonial Slider -->
+    
+    <!-- Start Footer Section -->
+    <footer id="footer" class="footer">
+      
+    </footer>
+    <!-- End Footer Section -->
     
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/tiny-slider.js"></script>
