@@ -7,10 +7,7 @@ body {
     background-size: cover;
     margin: 0;
     padding: 0;
-    display: flex;
     height: 100vh;
-    align-items: center;
-    justify-content: center;
 }
 
 .container {
@@ -145,4 +142,35 @@ input[type="submit"]:hover {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   color: #e67300;
   font-weight: bold;
+}
+
+html, * { 
+    margin: 0;
+    padding: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+nav {
+    background-color: rgb(28, 59, 77);
+    padding: 2rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 5em;
+}
+
+.navbar li {
+    list-style-type: none;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition: all ease 0.3s;
+}
+
+.navbar a:hover {
+    color: rgb(129, 129, 129);
 }
