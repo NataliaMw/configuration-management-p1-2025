@@ -4,6 +4,7 @@ let loaded = (eventLoaded) => {
     myform.addEventListener("submit", (eventSubmit) => {
       debugger;
     });
+
 };
 
 window.addEventListener("DOMContentLoaded", loaded);
@@ -86,6 +87,7 @@ for (let key in conteoProductos) {
     
 }
 
+
 }
 
 obtenerDatos();
@@ -93,4 +95,44 @@ obtenerDatos();
 
 window.onscroll = function() {scrollFunction()};
 
-window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  var mybutton = document.getElementById("scrollTop");
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+function shopAlert() {
+  Swal.fire({
+    title: 'Gracias por tu compra!',
+    text: 'Tu artículo ha sido agregado al carrito',
+    icon: 'success',
+    confirmButtonText: 'Seguir comprando'
+  });
+}
+
+function shopAlert2() {
+  Swal.fire({
+    title: 'Disculpas',
+    text: 'La tienda se encuentra en mantenimiento',
+    icon: 'error',
+    confirmButtonText: 'Seguir comprando'
+  });
+}
+
+function userAlert() {
+  Swal.fire({
+    title: 'Disculpas',
+    text: 'Esta sección se encuentra en mantenimiento',
+    icon: 'error',
+    confirmButtonText: 'Seguir comprando'
+  });
+}
+
