@@ -1,0 +1,30 @@
+.reseñas {
+    margin-top: 20px;
+}
+
+.reseña-card {
+    border-left: 5px solid #000000;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.reseña-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.reseña-card .card-title {
+    font-weight: bold;
+    color: #000000;
+}
+
+.reseña-card .card-subtitle {
+    font-style: italic;
+}
+
+.reseña-card .card-text {
+    font-size: 1.05rem;
+}
+
+.titulo-seccion {
+    color: #212529;
+}
