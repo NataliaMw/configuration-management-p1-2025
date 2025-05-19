@@ -1,304 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="Juan Pablo Plúas Muñoz" content="Untree.co" />
-    <link rel="shortcut icon" href="favicon.png" />
+<head>
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+  <meta name="Juan Pablo Plúas Muñoz" content="Untree.co" />
+  <link rel="shortcut icon" href="favicon.png" />
 
-    <meta name="description" content="" />
-    <meta name="keywords" content="bootstrap, bootstrap4" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="bootstrap, bootstrap4" />
 
-    <!-- Bootstrap CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
-    <link href="css/tiny-slider.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet" />
-    <title>Belleza Suprema</title>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="js/main.js" defer></script>
-  </head>
-
-  <body>
-    <button onclick="topFunction()" id="scrollTop" title="Go to top">
-      <i class="fas fa-arrow-up"></i>
-    </button>
-    <!-- Start Header/Navigation -->
-    <nav
-      class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark"
-      arial-label="Furni navigation bar"
-    >
-      <div class="container">
-        <a class="navbar-brand" href="index.html"
-          >Belleza Extrema<span>.</span></a
-        >
-
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarsFurni"
-          aria-controls="navbarsFurni"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarsFurni">
-          <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Inicio</a>
-            </li>
-            <li><a class="nav-link" href="#productos">Productos</a></li>
-            <li><a class="nav-link" href="#testimonios">Testimonios</a></li>
-            <li><a class="nav-link" href="#footer">Contacto</a></li>
-          </ul>
-
-          <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-            <li>
-              <a class="nav-link" onclick="userAlert()"><img src="images/user.svg" /></a>
-            </li>
-            <li>
-              <a class="nav-link" onclick="shopAlert2()"
-                ><img src="images/cart.svg"
-              /></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <!-- End Header/Navigation -->
-
-    <!-- Start Hero Section -->
-    <div class="hero">
-      <div class="container">
-        <div class="row justify-content-between">
-          <div class="col-lg-7">
-            <div class="hero-img-wrap">
-              <img
-                src="https://content.app-sources.com/s/53118190821339987/uploads/Wellness/wellness-1675474.png?format=webp"
-                class="img-fluid"
-                style="height: 450px !important;"
-              />
+  <!-- Bootstrap CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <link href="css/tiny-slider.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+  <title>Belleza Suprema</title>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+    <footer id="footer" class="footer-section">
+        <div class="container relative">
+  
+          <div class="title-table">
+            <span>
+              Lo que les gusta a los usuarios ...
+            </span>
+          </div>
+  
+          <div class="sofa-img">
+            <div id="resultados" class="blog-section">
+              <div class="container">
+                <div class="row">
+                  <div class="p-3 border bg-white">
+                    <table class="table site-block-order-table mb-5">
+                      <thead>
+                        <th>Intereses</th>
+                        <th>Conteo</th>
+                      </thead>
+                      <tbody id="tablebody"></tbody> <!--IMPORTANTE BACKEND-->
+                    </table>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-lg-5">
-            <div class="intro-excerpt">
-              <h1>Bienvenidos</h1>
+  
+          <div>
+            <div class="col-lg-6">
+              <div class="subscription-form">
+                <h3 class="d-flex align-items-center">
+                  <span class="me-1"
+                    ><img
+                      src="images/envelope-outline.svg"
+                      alt="Image"
+                      class="img-fluid" /></span
+                  ><span>¡Háblanos un poco de ti!</span>
+                </h3>
+  
+                <form class="row g-3" id="formulario">
+                  <div class="col-auto">
+                    <input
+                      type="text"
+                      id="nombre"
+                      name="nombre"
+                      class="form-control"
+                      placeholder="Ingresa tu nombre"
+                    />
+                  </div>
+                  <div class="col-auto">
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="form-control"
+                      placeholder="Ingresa tu correo electrónico"
+                    />
+                  </div>
+                  <div class="col-auto">
+                    <select
+                      class="form-select"
+                      name="intereses"
+                      id="intereses"
+                    >
+                      <option selected value="no_selected">
+                        Selecciona tus intereses
+                      </option>
+                      <option value="Cuidado de la piel">Cuidado de la piel</option>
+                      <option value="Maquillaje">Maquillaje</option>
+                      <option value="Cuidado del cabello">Cuidado del cabello</option>
+                      <option value="Fragancias">Fragancias</option>
+                    </select>
+                  </div>
+                  <div class="col-auto">
+                    <button type="submit" class="btn btn-primary">
+                      <span class="fa fa-paper-plane"></span> <!--BUTTON-->
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+  
+          <div class="row g-5 mb-5">
+            <div class="col-lg-4">
+              <div class="mb-4 footer-logo-wrap">
+                <a href="#" class="footer-logo">Belleza Extrema<span>.</span></a>
+              </div>
               <p class="mb-4">
-                Tu tienda de productos de belleza de alta calidad.
+                Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio
+                quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam
+                vulputate velit imperdiet dolor tempor tristique. Pellentesque
+                habitant
               </p>
-              <p>
-                <a onclick="shopAlert2()" class="btn btn-secondary me-2">Comprar ahora</a
-                ><a href="#productos" class="btn btn-white-outline">Explorar</a>
-              </p>
+  
+              <ul class="list-unstyled custom-social">
+                <li>
+                  <a href="#"><span class="fa fa-brands fa-facebook-f"></span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="fa fa-brands fa-twitter"></span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="fa fa-brands fa-instagram"></span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="fa fa-brands fa-linkedin"></span></a>
+                </li>
+              </ul>
+            </div>
+  
+            <div class="col-lg-8">
+              <div class="row links-wrap">
+                <div class="col-6 col-sm-6 col-md-3">
+                  <ul class="list-unstyled">
+                    <li><a class="nav-link" href="#">Inicio</a></li>
+                    <li><a class="nav-link" href="#productos">Productos</a></li>
+                    <li>
+                      <a class="nav-link" href="#testimonios">Testimonios</a>
+                    </li>
+                    <li><a class="nav-link" href="#footer">Contacto</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
-          
-        </div>
-      </div>
-    </div>
-    <!-- End Hero Section -->
-
-    
-
-    <!-- Start Product Section -->
-    <div id="productos" class="product-section">
-      <div class="container">
-        <div class="row">
-          <!-- Start Column 1 -->
-          <div class="col-md-12 col-12 mb-5 mb-lg-0">
-            <h2 class="mb-4 section-title">Belleza al alcance de tus manos</h2>
-            <p class="mb-4">
-              Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet
-              velit. Aliquam vulputate velit imperdiet dolor tempor tristique.
-            </p>
-          </div>
-          <!-- End Column 1 -->
-
-          <!-- Start Column 2 -->
-          <div class="col-12 col-md-4 col-lg-4 mb-5 mb-md-0">
-            <a class="product-item" onclick="shopAlert()">
-              <img
-                src="https://sdcdn.io/mac/mx/mac_sku_MCMX40_1x1_0.png?width=1080&height=1080"
-                class="img-fluid product-thumbnail"
-              />
-              <h3 class="product-title">Set de Maquillaje MAC</h3>
-              <strong class="product-price">$50.00</strong>
-
-              <span class="icon-cross">
-                <img src="images/cross.svg" class="img-fluid" />
-              </span>
-            </a>
-          </div>
-          <!-- End Column 2 -->
-
-          <!-- Start Column 3 -->
-          <div class="col-12 col-md-4 col-lg-4 mb-5 mb-md-0">
-            <a class="product-item" onclick="shopAlert()">
-              <img
-                src="https://sdcdn.io/mac/mx/mac_sku_S23S01_1x1_0.png?width=1080&height=1080"
-                class="img-fluid product-thumbnail"
-              />
-              <h3 class="product-title">Set de Maquillaje MAC</h3>
-              <strong class="product-price">$78.00</strong>
-
-              <span class="icon-cross">
-                <img src="images/cross.svg" class="img-fluid" />
-              </span>
-            </a>
-          </div>
-          <!-- End Column 3 -->
-
-          <!-- Start Column 4 -->
-          <div class="col-12 col-md-4 col-lg-4 mb-5 mb-md-0">
-            <a class="product-item" onclick="shopAlert()">
-              <img
-                src="https://sdcdn.io/mac/mx/mac_sku_MCMX39_1x1_0.png?width=1080&height=1080"
-                class="img-fluid product-thumbnail"
-              />
-              <h3 class="product-title">Set de Maquillaje MAC</h3>
-              <strong class="product-price">$43.00</strong>
-
-              <span class="icon-cross">
-                <img src="images/cross.svg" class="img-fluid" />
-              </span>
-            </a>
-          </div>
-          <!-- End Column 4 -->
-        </div>
-      </div>
-    </div>
-    <!-- End Product Section -->
-
-     <!-- Start Testimonial Slider -->
-    <div id="testimonios" class="testimonial-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-7 mx-auto text-center">
-            <h2 class="section-title">Clientes Felices</h2>
-          </div>
-        </div>
-
-        <div class="row justify-content-center">
-          <div class="col-lg-12">
-            <div class="testimonial-slider-wrap text-center">
-
-              <div class="testimonios">
-                <div class="item">
-                  <div class="row justify-content-center">
-                    <div class="col-lg-8 mx-auto">
-                      <div class="testimonial-block text-center">
-                        <div class="author-info">
-                          <div class="author-pic">
-                            <img
-                              src="images/person-1.png"
-                              alt="Maria Jones"
-                              class="img-fluid"
-                            />
-                          </div>
-                          <h3 class="font-weight-bold">Laura G.</h3>
-                        </div>
-                        <blockquote class="mb-5">
-                          <p>
-                            &ldquo;El set de sombras es simplemente perfecto.
-                            Los colores son muy pigmentados y se mezclan
-                            fácilmente, permitiéndome crear looks desde los más
-                            sutiles hasta los más dramáticos. Además, la
-                            presentación es muy elegante y práctica para llevar
-                            en el bolso. ¡Estoy más que satisfecha con mi
-                            compra!&rdquo;
-                          </p>
-                        </blockquote>
-
-                        
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- END item -->
-
-                <div class="item">
-                  <div class="row justify-content-center">
-                    <div class="col-lg-8 mx-auto">
-                      <div class="testimonial-block text-center">
-                        <div class="author-info">
-                          <div class="author-pic">
-                            <img
-                              src="images/person_4.jpg"
-                              alt="Maria Jones"
-                              class="img-fluid"
-                            />
-                          </div>
-                          <h3 class="font-weight-bold">Marta R.</h3>
-                        </div>
-
-                        <blockquote class="mb-5">
-                          <p>
-                            &ldquo;¡Estoy encantada con los productos de esta
-                            tienda! La base de maquillaje tiene una cobertura
-                            increíble y dura todo el día sin necesidad de
-                            retoques. Además, no obstruye mis poros y mi piel se
-                            siente fresca y natural. ¡Definitivamente he
-                            encontrado mi marca favorita!&rdquo;
-                          </p>
-                        </blockquote>
-
-                        
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- END item -->
-
-                <div class="item">
-                  <div class="row justify-content-center">
-                    <div class="col-lg-8 mx-auto">
-                      <div class="testimonial-block text-center">
-                        <div class="author-info">
-                          <div class="author-pic">
-                            <img
-                              src="images/person_1.jpg"
-                              alt="Jorge Jones"
-                              class="img-fluid"
-                            />
-                          </div>
-                          <h3 class="font-weight-bold">Jorge S.</h3>
-                        </div>
-                        <blockquote class="mb-5">
-                          <p>
-                            &ldquo;Siempre he tenido problemas para encontrar un
-                            labial para mi esposa que no se corra y que mantenga su color
-                            vibrante durante horas. Desde que probó los labiales
-                            de esta marca, no he tenido que preocuparme más. Los
-                            colores son hermosos y duraderos, y la fórmula es
-                            súper hidratante me comenta. ¡Lo recomiendo al 100%!&rdquo;
-                          </p>
-                        </blockquote>
-
-                        
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- END item -->
+  
+          <div class="border-top copyright">
+            <div class="row pt-4">
+              <div class="col-lg-6">
+                <p class="mb-2 text-center text-lg-start">
+                  Copyright &copy;
+                  <script>
+                    document.write(new Date().getFullYear());
+                  </script>
+                  . All Rights Reserved. &mdash; Designed with love by
+                  <a href="https://untree.co">Untree.co</a> Distributed By
+                  <a hreff="https://themewagon.com">ThemeWagon</a>
+                  <!-- License information: https://untree.co/license/ -->
+                </p>
+              </div>
+  
+              <div class="col-lg-6 text-center text-lg-end">
+                <ul class="list-unstyled d-inline-flex ms-auto">
+                  <li class="me-4"><a href="#">Terms &amp; Conditions</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                </ul>
+  
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <!-- End Testimonial Slider -->
-    
-    <!-- Start Footer Section -->
+<!-- Start Footer Section -->
     <footer id="footer" class="footer">
       
     </footer>
@@ -307,5 +187,6 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/tiny-slider.js"></script>
     <script src="js/custom.js"></script>
-  </body>
+      </footer>
+</body>
 </html>
