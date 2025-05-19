@@ -1,19 +1,21 @@
-# Proyecto: Configuration Management P1 - 2025
+# Project: Configuration Management P1 - 2025
 
-## Integrantes y tareas asignadas:
+## Members and assigned tasks:
+- **Noelia Saltos**
+- Leader
 
-- **Santiago**  
-  - Crear el formulario
+- **Santiago Rodríguez**
+- Create the form
 
-- **Jahir**  
-  - Diseñar y desarrollar la barra de navegación (NavBar)
+- **Jahir Díaz**
+- Design and develop the navigation bar (NavBar)
 
-- **Dafne**  
-  -  Crear el banner principal del sitio
+- **Dafne Ruíz**
+- Create the main website banner
 
-- **Nicolás**  
-  - Redactar y diseñar la sección "About Us"
-
+- **Nicolás Sierra**
+- Write and design the "About Us" section
+  
 
 
 
