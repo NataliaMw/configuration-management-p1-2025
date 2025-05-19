@@ -7,6 +7,7 @@ export function Home() {
             <p>This is the home page of our application.</p>
             <nav>
                 <Link to="/">Index</Link>
+                <Link to="/about">About</Link>
             </nav>
         </div>
     )
