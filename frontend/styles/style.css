@@ -1,13 +1,181 @@
+/* General Layout */
 body {
-  background-color: gray;
-  font-family: "Tahoma", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
+/* Header Styles */
+header {
+  background-color: #0056b3;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  letter-spacing: 1px;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #d0e6ff;
+}
+
+/* Navigation Styles */
+.menu-toggle {
+  display: none;
+  font-size: 1.8em;
+  background: none;
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+nav {
+  background-color: #003d80;
+  padding: 10px 0;
+  margin-top: 20px;
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.1);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  font-weight: 500;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffdd57;
+}
+
+/* Responsive menu (for mobile) */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    margin: 0 auto;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    display: none;
+  }
+
+  nav.active ul,
+  nav#main-nav.active ul {
+    display: flex;
+  }
+}
+
+/* Main Section Styling */
+main {
+  padding: 20px;
+  max-width: 800px;
+  margin: 20px auto;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-size: larger;
+}
+
+/* Headings inside main */
+h2 {
+  color: #555;
+  margin-top: 20px;
+}
+
+/* Ordered lists */
+ol {
+  margin-bottom: 20px;
+}
+
+/* Image gallery */
+#image-gallery {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+#image-gallery h3 {
+  color: #555;
+}
+
+/* Carousel section */
+.carousel-section {
+  padding: 20px;
+  text-align: center;
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.carousel-item img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Retro Form Styles */
 .retro-form {
   background-color: #c0c0c0;
   border: 2px solid #000;
@@ -15,9 +183,10 @@ body {
   padding: 1.5rem;
   width: 360px;
   max-width: 90%;
+  margin: 40px auto;
 }
 
-h1 {
+.retro-form h1 {
   text-align: center;
   font-size: 1.2rem;
   margin-bottom: 1rem;
@@ -28,14 +197,14 @@ h1 {
   box-shadow: inset -2px -2px 0 #fff, inset 2px 2px 0 #404040;
 }
 
-label {
+.retro-form label {
   display: block;
   margin-bottom: 0.25rem;
   font-weight: bold;
 }
 
-input,
-select {
+.retro-form input,
+.retro-form select {
   width: 100%;
   padding: 0.4rem;
   margin-bottom: 0.8rem;
@@ -45,7 +214,7 @@ select {
   font-family: inherit;
 }
 
-button {
+.retro-form button {
   background-color: #c0c0c0;
   color: black;
   padding: 0.5rem;
@@ -57,7 +226,7 @@ button {
   cursor: pointer;
 }
 
-button:active {
+.retro-form button:active {
   box-shadow: inset 2px 2px 0 #404040, inset -2px -2px 0 #fff;
 }
 
@@ -71,4 +240,13 @@ button:active {
   width: 100%;
   max-width: 30%;
   height: auto;
+}
+
+/* Footer */
+footer {
+  background-color: #003d80;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: auto;
 }
