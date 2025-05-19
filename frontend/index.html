@@ -2,9 +2,10 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Título de la página</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ingeniería de Software 2</title>
+  <link rel="stylesheet" href="styles/styles.css" />
     <style>
         main {
             padding: 20px;
@@ -37,7 +38,29 @@
 </head>
 
 <body>
+  <header>
+    <h1>SOFTWARE ENGINEERING II</h1>
+    <p>COLLABORATIVE VERSION MANAGEMENT WITH GIT WORKSHOP - I TERM 2025</p>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav id="main-nav">
+      <ul>
+        <li><a href="#about">ABOUT US</a></li>
+        <li><a href="#contact">ENROLLMENT FORM</a></li>
+        <li><a href="#objective">GENERAL OBJECTIVE</a></li>
+        <li><a href="#description">DESCRIPTION</a></li>
+        <li><a href="#skills">PREVIOUS KNOWLEDGE</a></li>
+        <li><a href="#outcomes">LEARNING OUTCOMES</a></li>
+        <li><a href="#responsibles">RESPONSIBLES</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('main-nav');
+      nav.classList.toggle('active');
+    }
+  </script>
     <header>
         <h1>Bienvenido a mi sitio web</h1>
     </header>
