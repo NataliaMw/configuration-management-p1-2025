@@ -3,3 +3,6 @@
 About Us Section
 ## Savier Acosta
 Created simple structure for navigation menu
+
+## Robespierre Triviño Roman
+- Add contact form with its styles.
