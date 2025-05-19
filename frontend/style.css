@@ -1,0 +1,83 @@
+#login-form {
+  max-width: 360px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  background-color: #fffdf9;
+  font-family: "Segoe UI", sans-serif;
+  text-align: center;
+  position: relative;
+}
+
+.login-form__title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.login-form__input {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.login-form__input label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #444;
+}
+
+.login-form__input input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border 0.2s ease;
+}
+
+.login-form__input input:focus {
+  border-color: #ffa07a;
+  outline: none;
+}
+
+.login-form__img-container {
+  margin: 1.5rem 0;
+}
+
+.login-form__img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-form__button {
+  background-color: #ffa07a;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  color: white;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.login-form__button:hover {
+  background-color: #ff8c66;
+}
+
+#login-form::before {
+  content: "🐱 Welcome to the page of the team 3!";
+  position: absolute;
+  top: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.95rem;
+  background-color: #fff8ec;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #e67300;
+  font-weight: bold;
+}
