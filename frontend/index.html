@@ -336,9 +336,113 @@
         </div>
       </div>
     </section>
+    
+        <!-- About us Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Sobre nosotros</h2>
+            <p class="section-subtitle">El mejor grupo de Ingenieria de Software II</p>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>El grupo más dedicado de la materia. Con nuestra gran lider Noelia Saltos, nos llevará a crear proyectos innovadores para convertirnos en profesionales competentes.</p>
+                    <p>Somos un equipo de grandes nombres: Nicolás Sierra, Jahir Diaz y Dafne Ruiz. Todos con individualidades increibles y un deseo de trabajar en equipo.</p>
+                    <p>Santiago Rodriguez no trabajó</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://via.placeholder.com/600x400" alt="About Us">
+                </div>
+            </div>
+        </div>
+    </section>
 
-   
+
+
+    <script>
+        // Mobile Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a nav link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const navbarHeight = document.querySelector('.navbar').offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Form validation
+        const contactForm = document.getElementById('contactForm');
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const messageInput = document.getElementById('message');
+        const nameError = document.getElementById('nameError');
+        const emailError = document.getElementById('emailError');
+        const messageError = document.getElementById('messageError');
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            let isValid = true;
+
+            // Validate name
+            if (nameInput.value.trim() === '') {
+                nameError.style.display = 'block';
+                isValid = false;
+            } else {
+                nameError.style.display = 'none';
+            }
+
+            // Validate email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(emailInput.value.trim())) {
+                emailError.style.display = 'block';
+                isValid = false;
+            } else {
+                emailError.style.display = 'none';
+            }
+
+            // Validate message
+            if (messageInput.value.trim() === '') {
+                messageError.style.display = 'block';
+                isValid = false;
+            } else {
+                messageError.style.display = 'none';
+            }
+
+            // If form is valid, you would typically send the data to a server
+            if (isValid) {
+                alert('Form submitted successfully! In a real application, this would be sent to a server.');
+                contactForm.reset();
+            }
+        });
+
+        
     </script>
+
   </body>
 </html>
-
